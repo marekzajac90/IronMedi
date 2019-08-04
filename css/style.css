@@ -6,7 +6,6 @@ html {
 
 h1 {
   font-size: 20px;
-  font-weight: 700;
 }
 
 @media (min-width: 375px) {
@@ -17,6 +16,15 @@ h1 {
 
 p {
   font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
 }
 
 .buyNowBtn {
@@ -133,9 +141,11 @@ p {
 
 .header__aside {
   display: none;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: 998;
+  opacity: 0;
 }
 
 .header__aside--active {
@@ -148,5 +158,41 @@ p {
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.header__aside--menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  height: 70vh;
+  top: 10vh;
+  padding: 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #52affe;
+}
+
+.header__aside--link {
+  text-align: center;
+  font-size: 22px;
+  line-height: 70px;
+  border-bottom: 2px solid transpatent;
+}
+
+.header__aside--link:hover {
+  border-bottom: 2px solid #52affe;
+  color: #52affe;
 }
 /*# sourceMappingURL=style.css.map */
