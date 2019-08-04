@@ -141,11 +141,7 @@ li {
 
 .header__aside {
   display: none;
-  width: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   z-index: 998;
-  opacity: 0;
 }
 
 .header__aside--active {
@@ -158,7 +154,6 @@ li {
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 1;
 }
 
 .header__aside--menu {
@@ -176,7 +171,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70%;
+  width: 60%;
   height: 70vh;
   top: 10vh;
   padding: 0;
@@ -184,9 +179,15 @@ li {
   border-bottom: 1px solid #52affe;
 }
 
+@media (min-height: 812px) and (orientation: portrait) {
+  .header__aside--menu {
+    top: 16vh;
+  }
+}
+
 .header__aside--link {
   text-align: center;
-  font-size: 22px;
+  font-size: 26px;
   line-height: 70px;
   border-bottom: 2px solid transpatent;
 }
@@ -194,5 +195,62 @@ li {
 .header__aside--link:hover {
   border-bottom: 2px solid #52affe;
   color: #52affe;
+}
+
+.header__aside p {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 20vh;
+  margin-bottom: 10px;
+}
+
+@media (min-height: 812px) and (orientation: portrait) {
+  .header__aside p {
+    bottom: 14vh;
+  }
+}
+
+.header__socialMedia {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 2vh;
+  width: 100%;
+  height: 100px;
+}
+
+.header__socialMedia--links {
+  width: 60px;
+  height: 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.header__socialMedia--fb {
+  background-image: url(../ico/Facebook.svg);
+}
+
+.header__socialMedia--in {
+  background-image: url(../ico/Instagram.svg);
+}
+
+.header__socialMedia--de {
+  background-image: url(../ico/DeLuxus.svg);
+}
+
+.header__socialMedia--sh {
+  background-image: url(../ico/corb.svg);
 }
 /*# sourceMappingURL=style.css.map */
