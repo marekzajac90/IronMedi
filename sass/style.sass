@@ -4,11 +4,15 @@ html
     color: #fff 
 h1
     font-size: 20px
-    font-weight: 700
     @media (min-width: 375px)
         font-size: 22px
 p
     font-size: 14px
+a
+    text-decoration: none
+    color: #fff
+li
+    list-style: none
 .buyNowBtn
     background-color: transparent
     border: 2px solid #52affe
@@ -85,8 +89,11 @@ p
             margin-bottom: 28px
     &__aside
         display: none
-        transition: 0.4s
+        width: 0
+        transition: 0.5s
         z-index: 998
+        opacity: 0
+        
         &--active
             position: fixed
             display: block
@@ -97,5 +104,25 @@ p
             background-position: center bottom
             background-size: contain
             background-repeat: no-repeat
-
+            opacity: 1
+        &--menu
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 70%
+            height: 70vh
+            top: 10vh
+            padding: 0
+            margin: 0 auto
+            border-bottom: 1px solid #52affe
+        &--link
+            text-align: center
+            font-size: 22px
+            line-height: 70px
+            border-bottom: 2px solid transpatent
+            &:hover
+                border-bottom: 2px solid #52affe
+                color: #52affe
            
