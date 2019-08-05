@@ -14,8 +14,17 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 16px;
+  line-height: 25px;
+}
+
 p {
   font-size: 14px;
+}
+
+span {
+  color: #52affe;
 }
 
 a {
@@ -25,6 +34,13 @@ a {
 
 li {
   list-style: none;
+}
+
+section {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .buyNowBtn {
@@ -38,12 +54,6 @@ li {
 
 .buyNowBtn:hover {
   background-color: #52affe;
-}
-
-.header {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
 }
 
 .header::before {
@@ -252,5 +262,82 @@ li {
 
 .header__socialMedia--sh {
   background-image: url(../ico/corb.svg);
+}
+
+.usage {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.usage__titel {
+  margin: 100px auto 75px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.usage__container {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .usage__container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .usage__container--element {
+    margin: 0 25px 25px;
+  }
+}
+
+.usage__container--button {
+  margin-top: 25px;
+}
+
+.usage__container--description-isactive {
+  display: none;
+}
+
+.usage__container--button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.usage__container--button-description {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.usage__container--button-btn {
+  width: 20px;
+  height: 1px;
+  background-color: #52affe;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.usage__container--button-btn::after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: #52affe;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 /*# sourceMappingURL=style.css.map */
