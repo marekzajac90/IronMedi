@@ -1,3 +1,5 @@
+// Global setings
+        
 html
     background-color: #000
     font-family: 'Montserrat', sans-serif
@@ -6,13 +8,23 @@ h1
     font-size: 20px
     @media (min-width: 375px)
         font-size: 22px
+h2  
+    font-size: 16px
+    line-height: 25px
 p
     font-size: 14px
+span
+    color: #52affe
 a
     text-decoration: none
     color: #fff
 li
     list-style: none
+section
+    min-height: 100vh
+    overflow: hidden
+    position: relative
+    width: 100%
 .buyNowBtn
     background-color: transparent
     border: 2px solid #52affe
@@ -22,10 +34,12 @@ li
     color: #fff
     &:hover
         background-color: #52affe 
+
+
+//  section   Header   +    Aside as Mobile Menu
+
+    
 .header
-    position: relative
-    min-height: 100vh
-    overflow: hidden
     &::before
         position: absolute
         content: ''
@@ -58,8 +72,7 @@ li
             right: 0
             top: 50%
             transform: translateY(-50%)
-            margin-right: 5px
-            
+            margin-right: 5px        
     &__description
         padding-top: 50px
         &--img
@@ -89,8 +102,7 @@ li
             margin-bottom: 28px
     &__aside
         display: none
-        z-index: 998
-        
+        z-index: 998   
         &--active
             position: fixed
             display: block
@@ -140,8 +152,6 @@ li
         bottom: 2vh
         width: 100%
         height: 100px
-        @media (min-height: 812px) and (orientation: portrait)
-            4vh
         &--links
             width: 60px
             height: 60px
@@ -155,3 +165,50 @@ li
             background-image: url(../ico/DeLuxus.svg)
         &--sh
             background-image: url(../ico/corb.svg)
+
+
+// section Usage
+
+.usage
+    width: 70%
+    margin: 0 auto
+    text-align: center
+    &__titel
+        margin: 100px auto 75px
+        text-align: center
+        line-height: 25px
+    &__container
+        display: grid
+        @media (min-width: 768px)
+            grid-template-columns: 1fr 1fr
+        &--element
+            @media (min-width: 768px)
+                margin: 0 25px 25px
+        &--ico
+        &--button
+            margin-top: 25px
+        &--description
+        &--description-isactive
+            display: none
+    &__container--button
+        display: flex
+        flex-direction: column
+        align-items: center
+        height: 60px
+        cursor: pointer
+        margin-bottom: 50px
+        &-description
+            margin-bottom: 25px
+            font-size: 14px
+        &-btn
+            width: 20px
+            height: 1px
+            background-color: #52affe
+            transition: .3s
+            &::after
+                display: block
+                content: ''
+                width: 20px
+                height: 1px
+                background-color: #52affe
+                transform: rotate(90deg)
