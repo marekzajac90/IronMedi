@@ -20,7 +20,8 @@ h2 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 span {
@@ -54,6 +55,12 @@ section {
 
 .buyNowBtn:hover {
   background-color: #52affe;
+}
+
+.description__article-active {
+  padding: 15px 25px;
+  border: 2px solid #52affe;
+  border-radius: 70px;
 }
 
 .header::before {
@@ -279,6 +286,7 @@ section {
 .usage__container {
   display: -ms-grid;
   display: grid;
+  grid-gap: 40px;
 }
 
 @media (min-width: 768px) {
@@ -288,18 +296,33 @@ section {
   }
 }
 
-@media (min-width: 768px) {
-  .usage__container--element {
-    margin: 0 25px 25px;
-  }
+.usage__container--element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.usage__container--button {
-  margin-top: 25px;
+.usage__container--description {
+  display: block;
 }
 
-.usage__container--description-isactive {
+.usage__container--description-active {
   display: none;
+}
+
+.usage__container--description-more {
+  display: none;
+}
+
+.usage__container--description-moreActive {
+  display: block;
 }
 
 .usage__container--button {
@@ -313,7 +336,11 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 60px;
+  width: 120px;
   cursor: pointer;
   margin-bottom: 50px;
 }
@@ -339,5 +366,10 @@ section {
   background-color: #52affe;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.usage__container--button-btn-active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 /*# sourceMappingURL=style.css.map */
