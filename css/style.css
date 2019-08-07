@@ -48,7 +48,7 @@ section {
   background-color: transparent;
   border: 2px solid #52affe;
   border-radius: 25px;
-  width: 130px;
+  width: 80px;
   padding: 7px 20px;
   color: #fff;
 }
@@ -371,5 +371,103 @@ section {
 .usage__container--button-btn-active {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.price {
+  text-align: center;
+}
+
+.price::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 70px;
+  min-width: 100%;
+  height: 100%;
+  background-image: url(../img/priceBgMobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  z-index: -1;
+}
+
+@media (min-height: 812px) and (orientation: portrait) {
+  .price::before {
+    top: 100px;
+  }
+}
+
+.price__heading {
+  margin-top: 70px;
+}
+
+@media (min-height: 812px) and (orientation: portrait) {
+  .price__heading {
+    margin-top: 120px;
+  }
+}
+
+.price__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+@media (min-height: 812px) and (orientation: portrait) {
+  .price__elements {
+    margin-top: 80px;
+  }
+}
+
+.price__elements--element {
+  position: relative;
+  width: 140px;
+  height: 150px;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(33%, #52affe), to(black));
+  background: linear-gradient(180deg, #52affe 33%, black 100%);
+  margin-bottom: 30px;
+}
+
+@media (min-width: 375px) and (orientation: portrait) {
+  .price__elements--element {
+    width: 160px;
+    height: 170px;
+    margin-bottom: 40px;
+  }
+}
+
+.price__elements--text {
+  position: absolute;
+}
+
+.price__elements--package {
+  padding-bottom: 5px;
+  font-size: 14px;
+  top: 22%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-bottom: 2px solid #fff;
+}
+
+.price__elements--price {
+  font-size: 40px;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
