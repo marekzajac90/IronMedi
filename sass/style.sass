@@ -12,7 +12,8 @@ h2
     font-size: 16px
     line-height: 25px
 p
-    font-size: 14px
+    font-size: 12px
+    line-height: 18px
 span
     color: #52affe
 a
@@ -34,7 +35,10 @@ section
     color: #fff
     &:hover
         background-color: #52affe 
-
+.description__article-active
+    padding: 15px 25px
+    border: 2px solid #52affe
+    border-radius: 70px
 
 //  section   Header   +    Aside as Mobile Menu
 
@@ -179,22 +183,31 @@ section
         line-height: 25px
     &__container
         display: grid
+        grid-gap: 40px
         @media (min-width: 768px)
             grid-template-columns: 1fr 1fr
         &--element
-            @media (min-width: 768px)
-                margin: 0 25px 25px
+            display: flex
+            flex-direction: column
+            align-items: center
         &--ico
         &--button
-            margin-top: 25px
+            // margin-top: 25px
         &--description
-        &--description-isactive
+            display: block
+        &--description-active
             display: none
+        &--description-more
+            display: none
+        &--description-moreActive
+            display: block
     &__container--button
         display: flex
         flex-direction: column
         align-items: center
+        justify-content: center
         height: 60px
+        width: 120px
         cursor: pointer
         margin-bottom: 50px
         &-description
@@ -212,3 +225,5 @@ section
                 height: 1px
                 background-color: #52affe
                 transform: rotate(90deg)
+            &-active
+                transform: rotate(45deg)
