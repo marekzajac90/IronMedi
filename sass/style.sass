@@ -52,11 +52,13 @@ section
         display: block
         bottom: 0
         min-width: 100%
-        height: 100%
+        height: 100vh
         background-image: url(../img/headerBgMobile.svg)
         background-repeat: no-repeat
         background-size: contain
         background-position: center bottom
+        @media (min-width: 568px) and (orientation: landscape)
+            background-image: url(../img/headerBgMobileLandscape.svg)
     &__nav
         position: fixed
         height: 50px
@@ -83,6 +85,12 @@ section
         padding-top: 50px
         &--img
             max-width: 100%
+            @media (min-width: 568px) and (orientation: landscape)
+                position: absolute
+                height: 300px
+                left: 0
+                top: 10px
+                z-index: -1
         &--action
             position: absolute
             top: 58%
@@ -98,7 +106,13 @@ section
                 top: 60%
             @media (min-height: 812px) and (orientation: portrait)
                 top: 66%
+            @media (min-width: 568px) and (orientation: landscape)
+                top: 20%
+                left: 66%
+                align-items: flex-end
         &--motto
+            @media (min-width: 568px) and (orientation: landscape)
+                text-align: right
             &::after
                 content: ''
                 display: block
@@ -106,17 +120,23 @@ section
                 width: 150px
                 height: 2px
                 background-color: #fff
+                @media (min-width: 568px) and (orientation: landscape)
+                    position: absolute
+                    right: 0
         &--text
             margin-bottom: 28px
+            @media (min-width: 568px) and (orientation: landscape)
+                text-align: right
     &__aside
         display: none
+        overflow: hidden
         z-index: 998   
         &--active
             position: fixed
             display: block
             height: 100vh
             width: 100%
-            bottom: -10px
+            bottom: 0px
             background-color: #000
             background-image: url(../img/aside__mobile.svg)
             background-position: center bottom
@@ -237,6 +257,8 @@ section
 // section Price
 
 .price   
+    @media (min-width: 568px) and (orientation: landscape)
+            min-height: 750px
     &::before
         position: absolute
         content: ''
@@ -251,6 +273,8 @@ section
         z-index: -1
         @media (min-height: 812px) and (orientation: portrait)
             top: 100px
+        @media (min-width: 568px) and (orientation: landscape)
+            background-image: url(../img/priceBgMobileLandscape.svg)
     &__heading
         // margin-top: 70px
         @media (min-height: 812px) and (orientation: portrait)
@@ -304,11 +328,15 @@ section
         margin-bottom: 50px
         @media (min-height: 812px) and (orientation: portrait)
             margin-bottom: 0
+        @media (min-width: 568px) and (orientation: landscape)
+            width: 60%
 
 // section BuyNow
 
 .buy
     position: relative
+    @media (min-width: 568px) and (orientation: landscape)
+            min-height: 600px
     &::after
         display: block
         content: ''
@@ -323,6 +351,9 @@ section
         z-index: -1
         @media (min-height: 812px) and (orientation: portrait)
             bottom: 50px
+        @media (min-width: 568px) and (orientation: landscape)
+            background-image: url(../img/priceBgMobileLandscape.svg)
+            bottom: 20px
     &__produckt
         display: flex
         flex-direction: column
@@ -331,9 +362,10 @@ section
         margin-top: 70px
         @media (min-height: 812px) and (orientation: portrait)
             margin-top: 120px
-
+        @media (min-width: 568px) and (orientation: landscape)
+            margin-top: 30px
         &--img
-
+            
 
         &--btn
             margin-bottom: 50px
