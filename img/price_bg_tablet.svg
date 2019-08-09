@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="861.318" height="867.254" viewBox="0 0 861.318 867.254">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.097" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#129bdb"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <path id="price_bg_tablet" d="M433.064,1204.746S343,1381.336,119.18,1322.473s-314.744-102.03-461.624-51.015S-403.118,2072-403.118,2072H433.064Z" transform="translate(428.254 -1204.746)" fill="url(#linear-gradient)"/>
+</svg>
