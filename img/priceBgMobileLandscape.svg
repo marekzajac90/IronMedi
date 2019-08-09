@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="895" height="748.973" viewBox="0 0 895 748.973">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#52affe"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <path id="Schnittmenge_2" data-name="Schnittmenge 2" d="M-338.133-3169.134v-708.031c33.689-8.535,80.5-9.264,133.835,5.774,111.836,31.531,184.936,28.216,314.892,17.231,114.409-9.669,321.162-100.488,446.273-47.408v732.434Z" transform="translate(338.133 3918.106)" fill="url(#linear-gradient)"/>
+</svg>
