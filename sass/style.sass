@@ -59,6 +59,7 @@ section
         background-position: center bottom
         @media (min-width: 568px) and (orientation: landscape)
             background-image: url(../img/headerBgMobileLandscape.svg)
+            bottom: -5px
     &__nav
         position: fixed
         height: 50px
@@ -87,10 +88,11 @@ section
             max-width: 100%
             @media (min-width: 568px) and (orientation: landscape)
                 position: absolute
-                height: 300px
+                max-width: 50%
                 left: 0
                 top: 10px
                 z-index: -1
+            
         &--action
             position: absolute
             top: 58%
@@ -132,16 +134,31 @@ section
         overflow: hidden
         z-index: 998   
         &--active
+            position: relative
             position: fixed
             display: block
             height: 100vh
             width: 100%
-            bottom: 0px
             background-color: #000
-            background-image: url(../img/aside__mobile.svg)
-            background-position: center bottom
-            background-size: contain
-            background-repeat: no-repeat
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                width: 100%
+                height: 100vh
+                bottom: -10px
+                background-image: url(../img/aside__mobile.svg)
+                background-position: center bottom
+                background-size: contain
+                background-repeat: no-repeat
+                z-index: -1
+                @media (min-width: 568px) and (orientation: landscape)
+                    background-image: url(../img/assideBgMobileLanscape.svg)
+                    bottom: 8vh
+                @media (min-width: 812px) and (orientation: landscape)
+                    bottom: -8vh
+                @media (min-width: 820px) and (orientation: landscape)
+                    bottom: -2vh
         &--menu
             position: relative
             display: flex
@@ -156,11 +173,20 @@ section
             border-bottom: 1px solid #52affe
             @media (min-height: 812px) and (orientation: portrait)
                 top: 16vh
+            @media (min-width: 568px) and (orientation: landscape)
+                height: 50vh
+                width: 40%
+                top: 25vh
+                margin: 0 20%
+                border-bottom: none
+                border-right: 1px solid #52affe
         &--link
             text-align: center
             font-size: 26px
             line-height: 70px
             border-bottom: 2px solid transpatent
+            @media (min-width: 568px) and (orientation: landscape)
+                line-height: 50px
             &:hover
                 border-bottom: 2px solid #52affe
                 color: #52affe
@@ -172,6 +198,8 @@ section
             margin-bottom: 10px
             @media (min-height: 812px) and (orientation: portrait)
                 bottom: 14vh
+            @media (min-width: 568px) and (orientation: landscape)
+                bottom: 5vh
     &__socialMedia
         position: absolute
         display: flex
@@ -181,11 +209,22 @@ section
         bottom: 2vh
         width: 100%
         height: 100px
+        @media (min-width: 568px) and (orientation: landscape)
+            flex-direction: column
+            width: 40%
+            bottom: 0
+            top: 20vh
+            right: 10%
+            height: 60vh
+            // transform: translateY(-50vh)
         &--links
             width: 60px
             height: 60px
             background-position: center center
             background-repeat: no-repeat
+            @media (min-width: 568px) and (orientation: landscape)
+                width: 40px
+                height: 40px
         &--fb
             background-image: url(../ico/Facebook.svg)
         &--in
@@ -341,7 +380,7 @@ section
         display: block
         content: ''
         position: absolute
-        bottom: -15px
+        bottom: -20px
         min-width: 100%
         height: 100%
         background-image: url(../img/priceBgMobile.svg)
@@ -353,7 +392,9 @@ section
             bottom: 50px
         @media (min-width: 568px) and (orientation: landscape)
             background-image: url(../img/priceBgMobileLandscape.svg)
-            bottom: 20px
+            bottom: 0
+        @media (min-width: 667px) and (orientation: landscape)
+            bottom: -50px   
     &__produckt
         display: flex
         flex-direction: column
@@ -362,10 +403,9 @@ section
         margin-top: 70px
         @media (min-height: 812px) and (orientation: portrait)
             margin-top: 120px
-        @media (min-width: 568px) and (orientation: landscape)
-            margin-top: 30px
+        
         &--img
-            
+            margin-top: 50px
 
         &--btn
             margin-bottom: 50px
