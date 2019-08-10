@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="715.891" height="342.283" viewBox="0 0 715.891 342.283">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="763.359" height="361.784" viewBox="0 0 763.359 361.784">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" y1="0.358" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#129bdb"/>
       <stop offset="1"/>
     </linearGradient>
   </defs>
-  <path id="headerBgMobileLandscape" d="M2139.185-386.982c-200.256-.84-493.214-2.529-700.794-5.714V-510.459c140.724,101.61,208.76,21.315,306.207-116.453,83.414-117.931,290.231-123.227,409.684-69.945v309.875Z" transform="translate(-1438.391 729.265)" fill="url(#linear-gradient)"/>
+  <path id="headerBgMobileLandscape" d="M1443.391-368.467V-497.412c147.683,100.733,220.229,17.186,323.648-125.015,89.528-123.1,311.5-128.626,439.71-73.009v326.03c-139.287.952-324.5,1.925-499.681,1.925C1613.454-367.481,1522.694-367.759,1443.391-368.467Z" transform="translate(-1443.391 729.265)" fill="url(#linear-gradient)"/>
 </svg>
