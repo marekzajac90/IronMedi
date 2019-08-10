@@ -81,6 +81,7 @@ section {
 @media (min-width: 568px) and (orientation: landscape) {
   .header::before {
     background-image: url(../img/headerBgMobileLandscape.svg);
+    bottom: -5px;
   }
 }
 
@@ -125,7 +126,7 @@ section {
 @media (min-width: 568px) and (orientation: landscape) {
   .header__description--img {
     position: absolute;
-    height: 300px;
+    max-width: 50%;
     left: 0;
     top: 10px;
     z-index: -1;
@@ -216,16 +217,45 @@ section {
 }
 
 .header__aside--active {
+  position: relative;
   position: fixed;
   display: block;
   height: 100vh;
   width: 100%;
-  bottom: 0px;
   background-color: #000;
+}
+
+.header__aside--active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  bottom: -10px;
   background-image: url(../img/aside__mobile.svg);
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  .header__aside--active::after {
+    background-image: url(../img/assideBgMobileLanscape.svg);
+    bottom: 8vh;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  .header__aside--active::after {
+    bottom: -8vh;
+  }
+}
+
+@media (min-width: 820px) and (orientation: landscape) {
+  .header__aside--active::after {
+    bottom: -2vh;
+  }
 }
 
 .header__aside--menu {
@@ -257,11 +287,28 @@ section {
   }
 }
 
+@media (min-width: 568px) and (orientation: landscape) {
+  .header__aside--menu {
+    height: 50vh;
+    width: 40%;
+    top: 25vh;
+    margin: 0 20%;
+    border-bottom: none;
+    border-right: 1px solid #52affe;
+  }
+}
+
 .header__aside--link {
   text-align: center;
   font-size: 26px;
   line-height: 70px;
   border-bottom: 2px solid transpatent;
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  .header__aside--link {
+    line-height: 50px;
+  }
 }
 
 .header__aside--link:hover {
@@ -284,6 +331,12 @@ section {
   }
 }
 
+@media (min-width: 568px) and (orientation: landscape) {
+  .header__aside p {
+    bottom: 5vh;
+  }
+}
+
 .header__socialMedia {
   position: absolute;
   display: -webkit-box;
@@ -303,11 +356,32 @@ section {
   height: 100px;
 }
 
+@media (min-width: 568px) and (orientation: landscape) {
+  .header__socialMedia {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40%;
+    bottom: 0;
+    top: 20vh;
+    right: 10%;
+    height: 60vh;
+  }
+}
+
 .header__socialMedia--links {
   width: 60px;
   height: 60px;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  .header__socialMedia--links {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .header__socialMedia--fb {
@@ -576,7 +650,7 @@ section {
   display: block;
   content: '';
   position: absolute;
-  bottom: -15px;
+  bottom: -20px;
   min-width: 100%;
   height: 100%;
   background-image: url(../img/priceBgMobile.svg);
@@ -595,7 +669,13 @@ section {
 @media (min-width: 568px) and (orientation: landscape) {
   .buy::after {
     background-image: url(../img/priceBgMobileLandscape.svg);
-    bottom: 20px;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 667px) and (orientation: landscape) {
+  .buy::after {
+    bottom: -50px;
   }
 }
 
@@ -622,10 +702,8 @@ section {
   }
 }
 
-@media (min-width: 568px) and (orientation: landscape) {
-  .buy__produckt {
-    margin-top: 30px;
-  }
+.buy__produckt--img {
+  margin-top: 50px;
 }
 
 .buy__produckt--btn {
