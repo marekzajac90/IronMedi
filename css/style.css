@@ -81,7 +81,14 @@ section {
 @media (min-width: 568px) and (orientation: landscape) {
   .header::before {
     background-image: url(../img/headerBgMobileLandscape.svg);
-    bottom: -5px;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  .header::before {
+    background-image: url(../img/headerBgMobileLandscapeIphoenX.svg);
+    bottom: 0px;
   }
 }
 
@@ -130,6 +137,12 @@ section {
     left: 0;
     top: 10px;
     z-index: -1;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  .header__description--img {
+    max-width: 40%;
   }
 }
 
@@ -412,6 +425,18 @@ section {
   line-height: 25px;
 }
 
+@media (min-width: 667px) and (orientation: landscape) {
+  .usage__titel {
+    width: 80%;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  .usage__titel {
+    width: 70%;
+  }
+}
+
 .usage__container {
   display: -ms-grid;
   display: grid;
@@ -650,7 +675,7 @@ section {
   display: block;
   content: '';
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   min-width: 100%;
   height: 100%;
   background-image: url(../img/priceBgMobile.svg);
@@ -658,6 +683,12 @@ section {
   background-size: contain;
   background-position: center bottom;
   z-index: -1;
+}
+
+@media (min-height: 667px) and (orientation: portrait) {
+  .buy::after {
+    bottom: -20px;
+  }
 }
 
 @media (min-height: 812px) and (orientation: portrait) {
@@ -699,6 +730,18 @@ section {
 @media (min-height: 812px) and (orientation: portrait) {
   .buy__produckt {
     margin-top: 120px;
+  }
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  .buy__produckt {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  .buy__produckt {
+    margin-top: 150px;
   }
 }
 
