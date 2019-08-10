@@ -687,7 +687,7 @@ section {
 
 @media (min-height: 667px) and (orientation: portrait) {
   .buy::after {
-    bottom: -20px;
+    bottom: -40px;
   }
 }
 
