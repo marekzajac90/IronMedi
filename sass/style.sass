@@ -59,7 +59,10 @@ section
         background-position: center bottom
         @media (min-width: 568px) and (orientation: landscape)
             background-image: url(../img/headerBgMobileLandscape.svg)
-            bottom: -5px
+            bottom: 0
+        @media (min-width: 812px) and (orientation: landscape)
+            background-image: url(../img/headerBgMobileLandscapeIphoenX.svg)
+            bottom: 0px
     &__nav
         position: fixed
         height: 50px
@@ -92,6 +95,8 @@ section
                 left: 0
                 top: 10px
                 z-index: -1
+            @media (min-width: 812px) and (orientation: landscape)
+                max-width: 40%
             
         &--action
             position: absolute
@@ -245,6 +250,10 @@ section
         margin: 100px auto 75px
         text-align: center
         line-height: 25px
+        @media (min-width: 667px) and (orientation: landscape)
+            width: 80%
+        @media (min-width: 812px) and (orientation: landscape)
+            width: 70%
     &__container
         display: grid
         grid-gap: 40px
@@ -380,7 +389,7 @@ section
         display: block
         content: ''
         position: absolute
-        bottom: -20px
+        bottom: 0
         min-width: 100%
         height: 100%
         background-image: url(../img/priceBgMobile.svg)
@@ -388,6 +397,8 @@ section
         background-size: contain
         background-position: center bottom
         z-index: -1
+        @media (min-height: 667px) and (orientation: portrait)
+            bottom: -20px
         @media (min-height: 812px) and (orientation: portrait)
             bottom: 50px
         @media (min-width: 568px) and (orientation: landscape)
@@ -403,9 +414,13 @@ section
         margin-top: 70px
         @media (min-height: 812px) and (orientation: portrait)
             margin-top: 120px
-        
+        @media (min-width: 568px) and (orientation: landscape)
+            margin-top: 0
+        @media (min-width: 812px) and (orientation: landscape)
+            margin-top: 150px
         &--img
             margin-top: 50px
+            
 
         &--btn
             margin-bottom: 50px
