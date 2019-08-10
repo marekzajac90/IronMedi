@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="834.711" height="360.624" viewBox="0 0 834.711 360.624">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.171" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#129bdb"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <path id="assideBgMobileLanscape" d="M-1380,9938.377s55.757,31.3,171.849,38.585,424.057-29.815,519.3-38.585,143.558,38.585,143.558,38.585v320.956H-1380Z" transform="translate(1380 -9937.294)" fill="url(#linear-gradient)"/>
+</svg>
